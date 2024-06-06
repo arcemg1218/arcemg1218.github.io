@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional and scalable website demonstrating web design concepts with an Isle of Man TT race theme.">
+    <title>Isle of Man TT Race Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        /* Responsive Images */
+        .responsive {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Lists */
+        .simple-list {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        .complex-list {
+            list-style-type: circle;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Flexbox and Grid */
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        form button {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Isle of Man TT Race</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="riders.html">Riders</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Welcome to the Isle of Man TT Race</h2>
+            <p>Your website should be professional in tone and appearance, and it should be scalable—allowing you to add content later on...</p>
+            <img src="tt-race.jpg" alt="Isle of Man TT race image" class="responsive">
+            <figcaption>An example image of the Isle of Man TT race</figcaption>
+        </section>
+        
+        <section>
+            <h2>List Example</h2>
+            <h3>Simple List</h3>
+            <ul class="simple-list">
+                <li>Rider 1</li>
+                <li>Rider 2</li>
+                <li>Rider 3</li>
+            </ul>
+            <h3>Complex List</h3>
+            <ul class="complex-list">
+                <li>Rider 1
+                    <ul>
+                        <li>Bike Specs</li>
+                        <li>Race Stats</li>
+                    </ul>
+                </li>
+                <li>Rider 2</li>
+                <li>Rider 3</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Race Schedule</h2>
+            <table>
+                <caption>Race Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>June 1</td>
+                        <td>Practice</td>
+                        <td>Mountain Course</td>
+                    </tr>
+                    <tr>
+                        <td>June 3</td>
+                        <td>Superbike Race</td>
+                        <td>Mountain Course</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Race Highlights</h2>
+            <video controls>
+                <source src="tt-highlights.mp4" type="video/mp4">
+                <track src="captions.vtt" kind="captions" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Isle of Man TT Race</p>
+        <a href="https://www.iomtt.com" target="_blank">Official TT Website</a>
+    </footer>
+</body>
+</html>
